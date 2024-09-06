@@ -1,0 +1,17 @@
+<!-- myapp/templates/otp_verify.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify OTP</title>
+</head>
+<body>
+    <h2>Verify OTP</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Verify</button>
+    </form>
+    <p>A 6-digit OTP has been sent to {{ email }}. Please enter it here.</p>
+    
+</body>
+</html>
